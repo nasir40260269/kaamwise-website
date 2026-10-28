@@ -22,3 +22,10 @@ Search `index.html` for these values:
 
 ## Contact
 WhatsApp +92 300 4898623 · kaamwiseautomation@gmail.com · Lahore, Pakistan
+
+## Security
+- **Content Security Policy** (in `index.html`): only the page's own script (pinned by SHA-256 hash), Google Fonts and local images may load. Injected scripts, plugins, `<base>` tag changes and form posts to other sites are blocked.
+- If you edit the `<script>` block in `index.html`, update the `sha256-…` hash in the Content-Security-Policy meta tag. Otherwise the browser will block the script.
+- External links use `rel="noopener noreferrer"`. The enquiry form limits input length and never sends data to a server: it only opens WhatsApp.
+- No `innerHTML` with dynamic content, and no cookies, trackers or third-party scripts.
+- HTTPS is enforced by GitHub Pages. `/.well-known/security.txt` tells people how to report a security problem.

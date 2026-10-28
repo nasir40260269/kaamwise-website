@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Y6cXqbWKht1bCCoHGoYyPzvephxy6hYge8iRKeDte3I='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kaamwise Automation</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -408,6 +412,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 /* Sharp blue background shapes */
 .shapes { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 .shapes svg { width: 100%; height: 100%; display: block; }
+.viz-tag.ok-tag { color: var(--vis-ok); }
+.calc-eyebrow { color: inherit; opacity: .85; }
+.foot-brand { display: flex; align-items: center; gap: 10px; }
+.logo-mark.foot-mark { width: 28px; height: 28px; border-radius: 7px; }
+.v-chart .bars .h45 { height: 45%; }
+.v-chart .bars .h62 { height: 62%; }
+.v-chart .bars .h50 { height: 50%; }
+.v-chart .bars .h74 { height: 74%; }
+.v-chart .bars .h58 { height: 58%; }
+.v-chart .bars .h82 { height: 82%; }
+.v-chart .bars .h96 { height: 96%; }
 </style>
 </head>
 <body>
@@ -465,7 +480,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <p class="tagline">You bring the problem. <span>We bring the solution.</span></p>
         <p class="lede">Kaamwise Automation helps businesses save time and improve productivity with practical AI and automation: from Excel reports and invoices to AI assistants and camera-based quality checks. Set it up once. It works for you every day.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://wa.me/923004898623?text=Assalam-o-Alaikum%2C%20I%20want%20to%20automate%20some%20work%20in%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Chat on WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/923004898623?text=Assalam-o-Alaikum%2C%20I%20want%20to%20automate%20some%20work%20in%20my%20business." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Chat on WhatsApp</a>
           <a class="btn btn-ghost" href="#services">See what we automate</a>
         </div>
         <dl class="hstats">
@@ -537,7 +552,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <span class="ex">e.g. supplier bill PDF → amounts in your ledger</span>
         </article>
         <article class="svc">
-          <div class="viz v-chart" aria-hidden="true"><div class="kpi"><span>Today's sales</span><span><strong>Rs 186,400</strong> <span class="up">▲ 12%</span></span></div><div class="bars"><span style="height:45%"></span><span style="height:62%"></span><span style="height:50%"></span><span style="height:74%"></span><span style="height:58%"></span><span style="height:82%"></span><span style="height:96%"></span></div></div>
+          <div class="viz v-chart" aria-hidden="true"><div class="kpi"><span>Today's sales</span><span><strong>Rs 186,400</strong> <span class="up">▲ 12%</span></span></div><div class="bars"><span class="h45"></span><span class="h62"></span><span class="h50"></span><span class="h74"></span><span class="h58"></span><span class="h82"></span><span class="h96"></span></div></div>
           <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
           <h3>Excel automation &amp; business dashboards</h3>
           <p>Daily reports build themselves, and live dashboards show sales, stock or production at a glance.</p>
@@ -561,7 +576,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <span class="ex">e.g. "Delivery to Karachi?" answered at 1 AM</span>
         </article>
         <article class="svc">
-          <div class="viz v-cv" aria-hidden="true"><span class="cam"></span><span class="fov"></span><span class="belt"></span><span class="box b1"></span><span class="box b2"></span><span class="box b3"></span><span class="bb"><b>OK 98%</b></span><span class="viz-tag" style="color:var(--vis-ok)">● Line 2 · 0 rejects/min</span></div>
+          <div class="viz v-cv" aria-hidden="true"><span class="cam"></span><span class="fov"></span><span class="belt"></span><span class="box b1"></span><span class="box b2"></span><span class="box b3"></span><span class="bb"><b>OK 98%</b></span><span class="viz-tag ok-tag">● Line 2 · 0 rejects/min</span></div>
           <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
           <h3>Computer vision</h3>
           <p>Cameras with AI for object detection, quality inspection and visual monitoring, so defects and counts are caught automatically.</p>
@@ -712,7 +727,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
         </div>
         <div class="calc-out" aria-live="polite">
-          <span class="eyebrow" style="color: inherit; opacity: .85;">Time spent every month</span>
+          <span class="eyebrow calc-eyebrow">Time spent every month</span>
           <div class="big"><span id="hours">13</span><small>hours</small></div>
           <p id="calcText">That's about 1.6 full working days every month, just on repeated tasks.</p>
           <p class="note">Based on about 4.3 weeks per month and an 8-hour working day.</p>
@@ -801,7 +816,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
         <form class="card" id="leadForm" novalidate>
           <label for="name">Your name
-            <input id="name" name="name" autocomplete="name" placeholder="e.g. Ali Raza">
+            <input id="name" name="name" autocomplete="name" maxlength="80" placeholder="e.g. Ali Raza">
           </label>
           <label for="biz">Business type
             <select id="biz" name="biz">
@@ -816,7 +831,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             </select>
           </label>
           <label for="task">Which task do you repeat the most?
-            <textarea id="task" name="task" placeholder="e.g. Every day I copy WhatsApp orders into Excel and send payment reminders by hand."></textarea>
+            <textarea id="task" name="task" maxlength="1000" placeholder="e.g. Every day I copy WhatsApp orders into Excel and send payment reminders by hand."></textarea>
           </label>
           <p class="err" id="formErr" hidden>Please write the task you want to automate.</p>
           <button type="submit" class="btn btn-primary">Send on WhatsApp</button>
@@ -829,7 +844,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:10px"><svg class="logo-mark" style="width:28px;height:28px;border-radius:7px" viewBox="300 200 700 700" aria-hidden="true"><rect x="300" y="200" width="700" height="700" rx="150" fill="#12243A"/><path d="M904 238c6 38 22 54 60 60-38 6-54 22-60 60-6-38-22-54-60-60 38-6 54-22 60-60z" fill="#F2A324"/><path d="M927 442c3 17 10 24 27 27-17 3-24 10-27 27-3-17-10-24-27-27 17-3 24-10 27-27z" fill="#F5F4EE"/><rect x="410" y="364" width="84" height="472" rx="42" fill="#F5F4EE"/><path d="M470 610 775 402" stroke="#F2A324" stroke-width="64"/><circle cx="775" cy="402" r="72" fill="#F2A324"/><path d="M470 590 775 797" stroke="#F5F4EE" stroke-width="64"/><circle cx="775" cy="797" r="72" fill="#F5F4EE"/><circle cx="775" cy="797" r="27" fill="#12243A"/><g stroke="#F2A324" stroke-width="11" stroke-linecap="round"><path d="M356 568h22M356 599h22M356 630h22"/></g><rect x="387" y="523" width="152" height="152" rx="32" fill="#F2A324" stroke="#12243A" stroke-width="11"/><text x="463" y="625" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="72" fill="#12243A">AI</text></svg>© <span id="yr">2026</span> Kaamwise Automation, Lahore</span>
+    <span class="foot-brand"><svg class="logo-mark foot-mark" viewBox="300 200 700 700" aria-hidden="true"><rect x="300" y="200" width="700" height="700" rx="150" fill="#12243A"/><path d="M904 238c6 38 22 54 60 60-38 6-54 22-60 60-6-38-22-54-60-60 38-6 54-22 60-60z" fill="#F2A324"/><path d="M927 442c3 17 10 24 27 27-17 3-24 10-27 27-3-17-10-24-27-27 17-3 24-10 27-27z" fill="#F5F4EE"/><rect x="410" y="364" width="84" height="472" rx="42" fill="#F5F4EE"/><path d="M470 610 775 402" stroke="#F2A324" stroke-width="64"/><circle cx="775" cy="402" r="72" fill="#F2A324"/><path d="M470 590 775 797" stroke="#F5F4EE" stroke-width="64"/><circle cx="775" cy="797" r="72" fill="#F5F4EE"/><circle cx="775" cy="797" r="27" fill="#12243A"/><g stroke="#F2A324" stroke-width="11" stroke-linecap="round"><path d="M356 568h22M356 599h22M356 630h22"/></g><rect x="387" y="523" width="152" height="152" rx="32" fill="#F2A324" stroke="#12243A" stroke-width="11"/><text x="463" y="625" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="72" fill="#12243A">AI</text></svg>© <span id="yr">2026</span> Kaamwise Automation, Lahore</span>
     <span>Less Manual Work. More Business Growth.</span>
   </div>
 </footer>
@@ -898,7 +913,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       "Business type: " + biz + ". The task I repeat the most: " + task;
     var a = document.createElement("a");
     a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
-    a.target = "_blank"; a.rel = "noopener";
+    a.target = "_blank"; a.rel = "noopener noreferrer";
     document.body.appendChild(a); a.click(); a.remove();
   });
 })();
@@ -930,7 +945,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   }
   function addLog(type, conf, ago) {
     var li = document.createElement("li");
-    li.innerHTML = "<time>" + clock(ago) + "</time><span><b>" + TYPES[type] + "</b> · " + Math.round(conf * 100) + "%</span>";
+    var tm = document.createElement("time"), sp = document.createElement("span"), b = document.createElement("b");
+    tm.textContent = clock(ago); b.textContent = TYPES[type];
+    sp.appendChild(b); sp.appendChild(document.createTextNode(" · " + Math.round(conf * 100) + "%"));
+    li.appendChild(tm); li.appendChild(sp);
     logEl.insertBefore(li, logEl.firstChild);
     while (logEl.children.length > 4) logEl.removeChild(logEl.lastChild);
   }
